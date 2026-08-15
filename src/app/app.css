@@ -1,0 +1,114 @@
+/* ==========================================
+   1. GLOBAL BASE STYLES (រក្សាកូដចាស់)
+   ========================================== */
+body {
+  background-color: #f8f9fa;
+  color: #1e293b;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   2. DARK MODE OVERRIDES (រក្សាកូដចាស់)
+   ========================================== */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .section-title {
+  color: #ffffff !important;
+}
+
+body.dark-mode .text-secondary,
+body.dark-mode .text-muted {
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================
+   3. CARD & PRODUCT STYLES (រក្សាកូដចាស់)
+   ========================================== */
+.card,
+.product-card,
+.category-card {
+  background-color: #ffffff !important;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.product-card:hover,
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card .card-title,
+.product-card .card-title,
+.category-card .category-name {
+  color: #0f172a !important;
+}
+
+.card p,
+.product-card p {
+  color: #475569;
+}
+
+.card .text-success,
+.product-card .text-success {
+  color: #16a34a !important;
+}
+
+body.dark-mode .deals-section {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+body.dark-mode .deals-section h2,
+body.dark-mode .deals-section p {
+  color: #ffffff !important;
+}
+
+/* ==========================================
+   4. NAVBAR & FOOTER STYLES (បន្ថែមថ្មី)
+   ========================================== */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #cbd5e1 !important;
+  transition: color 0.2s ease-in-out;
+  padding: 8px 16px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0dcaf0 !important;
+  font-weight: 600;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #0dcaf0;
+  padding-left: 5px;
+}
+
+.hover-info {
+  transition: color 0.2s ease-in-out;
+}
+
+.hover-info:hover {
+  color: #0dcaf0 !important;
+}

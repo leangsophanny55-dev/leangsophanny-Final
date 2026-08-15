@@ -1,0 +1,41 @@
+<div class="container py-5">
+    <h2 class="mb-4">Shopping Cart</h2>
+
+    <!-- បង្ហាញសារប្រសិនបើកន្ត្រកទទេ -->
+    <div *ngIf="cartItems.length === 0" class="alert alert-info">
+        កន្ត្រកទំនិញរបស់អ្នកទទេ!
+    </div>
+
+    <!-- បង្ហាញបញ្ជីទំនិញប្រសិនបើមាន -->
+    <div *ngIf="cartItems.length > 0">
+        <ul class="list-group mb-3 shadow-sm">
+            <li class="list-group-item d-flex justify-content-between align-items-center py-3"
+                *ngFor="let item of cartItems; let i = index">
+                <div class="d-flex align-items-center gap-3">
+                    <img [src]="item.image" alt="" style="width: 60px; height: 60px; object-fit: cover;"
+                        class="rounded">
+                    <div>
+                        <h6 class="my-0 fw-bold">{{ item.productName }}</h6>
+                        <small class="text-muted">តម្លៃ: ${{ item.price }}</small>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-4">
+                    <span class="text-success fw-bold fs-5">${{ item.price }}</span>
+                    <!-- ប៊ូតុងលុបទំនិញ -->
+                    <button class="btn btn-sm btn-outline-danger" (click)="removeItem(i)">
+                        <i class="bi bi-trash"></i> លុប
+                    </button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- បង្ហាញទឹកប្រាក់សរុប -->
+        <div class="d-flex justify-content-between align-items-center mt-3 p-3 bg-light rounded shadow-sm">
+            <h5 class="mb-0 fw-bold">ទឹកប្រាក់សរុប (Total):</h5>
+            <h4 class="text-success fw-bold mb-0">${{ getTotalPrice() }}</h4>
+        </div>
+
+        <button class="btn btn-success w-100 mt-3 py-2 fw-bold">Proceed to Checkout</button>
+    </div>
+</div>

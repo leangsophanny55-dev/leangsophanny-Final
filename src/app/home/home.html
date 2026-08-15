@@ -1,0 +1,506 @@
+<main>
+    <!-- ========================================================= -->
+    <!-- ១. HOME PAGE BLOCK -->
+    <!-- ========================================================= -->
+    <ng-container *ngIf="selectedMenu === 'home'">
+
+        <!-- HERO CAROUSEL -->
+        <div id="heroCarousel" class="carousel slide hero-carousel mb-4" data-bs-ride="carousel"
+            data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                    <img src="benner-1.jpg" class="d-block w-100 hero-image" alt="Banner 1"
+                        style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="display-4 fw-bold text-white hero-title">
+                            <span class="typing-text">SOPHANNY SHOP</span>
+                        </h1>
+                        <p class="lead text-white hero-description">Discover the latest trends and get up to 40% off on
+                            selected items</p>
+                        <button type="button" (click)="selectedMenu = 'products'"
+                            class="btn btn-info btn-lg rounded-pill px-4 mt-2 hero-button">PICK NOW</button>
+                    </div>
+                </div>
+
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <img src="benner2-new.png" class="d-block w-100 hero-image" alt="Banner 2"
+                        style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="display-4 fw-bold text-white hero-title">
+                            <span class="typing-text">FASHION WEEK</span>
+                        </h1>
+                        <p class="lead text-white hero-description">New arrivals just dropped. Don't miss out!</p>
+                        <button type="button" (click)="selectedMenu = 'products'"
+                            class="btn btn-info btn-lg rounded-pill px-4 mt-2 hero-button">SHOP NOW</button>
+                    </div>
+                </div>
+
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <img src="benner3.png" class="d-block w-100 hero-image" alt="Banner 3"
+                        style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="display-4 fw-bold text-white hero-title">
+                            <span class="typing-text">UP TO 50% OFF</span>
+                        </h1>
+                        <p class="lead text-white hero-description">Limited time offer. Grab yours today.</p>
+                        <button type="button" (click)="selectedMenu = 'deals'"
+                            class="btn btn-info btn-lg rounded-pill px-4 mt-2 hero-button">GET DEALS</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- CATEGORIES SECTION -->
+        <section class="category-section py-5">
+            <div class="container">
+                <h2 class="section-title text-start fw-bold mb-4">Shop by Category</h2>
+                <div class="row g-4 justify-content-center mt-2">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card style-pointer text-center" (click)="selectedMenu = 'categories'"
+                            style="cursor: pointer;">
+                            <div class="category-img"><img src="card1.png" alt="Clothing" class="img-fluid"></div>
+                            <div class="category-name mt-2 fw-semibold">Clothing</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card style-pointer text-center" (click)="selectedMenu = 'categories'"
+                            style="cursor: pointer;">
+                            <div class="category-img"><img src="card2.png" alt="Shoes" class="img-fluid"></div>
+                            <div class="category-name mt-2 fw-semibold">Shoes & Electronics</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card style-pointer text-center" (click)="selectedMenu = 'categories'"
+                            style="cursor: pointer;">
+                            <div class="category-img"><img src="card3.png" alt="Makeup" class="img-fluid"></div>
+                            <div class="category-name mt-2 fw-semibold">Makeup</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS SECTION -->
+        <section class="products-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-start fw-bold mb-4">Featured Products</h2>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Product 1 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card4.png" class="card-img-top" alt="Smart Watch"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Smart Watch</h5>
+                                <p class="card-text text-success fw-bold">$120.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 1, productName: 'Smart Watch', price: 120.00, image: 'card4.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card5.png" class="card-img-top" alt="Headphones"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Headphones</h5>
+                                <p class="card-text text-success fw-bold">$85.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 2, productName: 'Headphones', price: 85.00, image: 'card5.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card6.png" class="card-img-top" alt="Smartphone"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Smartphone</h5>
+                                <p class="card-text text-success fw-bold">$699.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 3, productName: 'Smartphone', price: 699.00, image: 'card6.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clothing Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card8.png" class="card-img-top" alt="Blue Long-Sleeve Crop Cardigan"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Blue Long-Sleeve Crop Cardigan</h5>
+                                <p class="card-text text-muted">$8.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 4, productName: 'Blue Long-Sleeve Crop Cardigan', price: 8.00, image: 'card8.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card9.jpg" class="card-img-top" alt="Yellow Striped Wrap Blouse"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Yellow Striped Wrap Blouse</h5>
+                                <p class="card-text text-muted">$6.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 5, productName: 'Yellow Striped Wrap Blouse', price: 6.00, image: 'card9.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card10.png" class="card-img-top" alt="Black Dress with White Long Sleeves"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Black Dress with White Long Sleeves</h5>
+                                <p class="card-text text-muted">$10.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 6, productName: 'Black Dress with White Long Sleeves', price: 10.00, image: 'card10.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skirts Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card11.jpg" class="card-img-top" alt="Brown Wrap Mini Skirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Brown Wrap Mini Skirt</h5>
+                                <p class="card-text text-muted">$5.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 7, productName: 'Brown Wrap Mini Skirt', price: 5.00, image: 'card11.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card12.jpg" class="card-img-top" alt="Blue Lace-Up Mini Skirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Blue Lace-Up Mini Skirt</h5>
+                                <p class="card-text text-muted">$6.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 8, productName: 'Blue Lace-Up Mini Skirt', price: 6.00, image: 'card12.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card13.jpg" class="card-img-top" alt="Pink Button-Front Mini Skirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Pink Button-Front Mini Skirt</h5>
+                                <p class="card-text text-muted">$6.50</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 9, productName: 'Pink Button-Front Mini Skirt', price: 6.50, image: 'card13.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shirts Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card14.jpg" class="card-img-top" alt="White Green-Collar Polo Shirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">White Green-Collar Polo Shirt</h5>
+                                <p class="card-text text-muted">$5.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 10, productName: 'White Green-Collar Polo Shirt', price: 5.00, image: 'card14.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card15.jpg" class="card-img-top" alt="Brown Short-Sleeve Polo Shirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Brown Short-Sleeve Polo Shirt</h5>
+                                <p class="card-text text-muted">$4.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 11, productName: 'Brown Short-Sleeve Polo Shirt', price: 4.00, image: 'card15.jpg', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card16.png" class="card-img-top" alt="Black Oversized T-Shirt"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Black Oversized T-Shirt</h5>
+                                <p class="card-text text-muted">$4.50</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 12, productName: 'Black Oversized T-Shirt', price: 4.50, image: 'card16.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shoes Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card17.png" class="card-img-top" alt="Pink Low-Top Sneakers"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Pink Low-Top Sneakers</h5>
+                                <p class="card-text text-muted">$12.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 13, productName: 'Pink Low-Top Sneakers', price: 12.00, image: 'card17.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card18.png" class="card-img-top" alt="White Running Sneakers"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">White Running Sneakers</h5>
+                                <p class="card-text text-muted">$12.50</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 14, productName: 'White Running Sneakers', price: 12.50, image: 'card18.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card19.png" class="card-img-top" alt="Red Puma Sneakers"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Red Puma Sneakers</h5>
+                                <p class="card-text text-muted">$14.50</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 15, productName: 'Red Puma Sneakers', price: 14.50, image: 'card19.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bags Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card20.png" class="card-img-top" alt="Blue Quilted Mini Handbag"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Blue Quilted Mini Handbag</h5>
+                                <p class="card-text text-muted">$600.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 16, productName: 'Blue Quilted Mini Handbag', price: 600.00, image: 'card20.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card21.png" class="card-img-top" alt="White Mini Top-Handle Handbag"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">White Mini Top-Handle Handbag</h5>
+                                <p class="card-text text-muted">$640.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 17, productName: 'White Mini Top-Handle Handbag', price: 640.00, image: 'card21.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card22.png" class="card-img-top" alt="White Quilted Shoulder Bag"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">White Quilted Shoulder Bag</h5>
+                                <p class="card-text text-muted">$700.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 18, productName: 'White Quilted Shoulder Bag', price: 700.00, image: 'card22.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Makeup Group -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card23.png" class="card-img-top" alt="Makeup brush"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Makeup brush</h5>
+                                <p class="card-text text-muted">$10.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 19, productName: 'Makeup brush', price: 10.00, image: 'card23.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card24.png" class="card-img-top" alt="Hydrogel Eye Masks"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Hydrogel Eye Masks</h5>
+                                <p class="card-text text-muted">$120.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 20, productName: 'Hydrogel Eye Masks', price: 120.00, image: 'card24.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card25.png" class="card-img-top" alt="Mascara"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Mascara</h5>
+                                <p class="card-text text-muted">$5.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 21, productName: 'Mascara', price: 5.00, image: 'card25.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card26.png" class="card-img-top" alt="Red Lip Gloss"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Red Lip Gloss</h5>
+                                <p class="card-text text-muted">$15.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 22, productName: 'Red Lip Gloss', price: 15.00, image: 'card26.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card27.png" class="card-img-top" alt="Pink Facial Roller"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Pink Facial Roller</h5>
+                                <p class="card-text text-muted">$13.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 23, productName: 'Pink Facial Roller', price: 13.00, image: 'card27.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card28.png" class="card-img-top" alt="Collagen Under-Eye Patches"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Collagen Under-Eye Patches</h5>
+                                <p class="card-text text-muted">$30.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 24, productName: 'Collagen Under-Eye Patches', price: 30.00, image: 'card28.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card29.png" class="card-img-top" alt="White Compact Makeup"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">White Compact Makeup</h5>
+                                <p class="card-text text-muted">$35.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 25, productName: 'White Compact Makeup', price: 35.00, image: 'card29.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Items Added Cleanly -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card30.png" class="card-img-top" alt="Hair claw clip"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Hair claw clip</h5>
+                                <p class="card-text text-muted">$12.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 26, productName: 'Hair claw clip', price: 12.00, image: 'card30.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card product-card h-100 shadow-sm border-0">
+                            <img src="card31.png" class="card-img-top" alt="Purple Perfume"
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title fw-bold">Purple Perfume</h5>
+                                <p class="card-text text-muted">$120.00</p>
+                                <button type="button" class="btn btn-outline-success rounded-pill px-4"
+                                    (click)="addToCart({ id: 27, productName: 'Purple Perfume', price: 120.00, image: 'card31.png', description: '', category: '' })">
+                                    <i class="bi bi-cart-fill me-2 fs-5"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ng-container>
+</main>

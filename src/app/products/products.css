@@ -1,0 +1,28 @@
+/* Purple Header Style */
+.purple-header {
+  background-color: #6f42c1 !important;
+}
+
+/* Size រូបភាព Product */
+.product-img {
+  width: 45px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Pagination Button Style */
+.btn-custom {
+  border-radius: 6px;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+/* Border Adjustment សម្រាប់ Search Input */
+.input-group-text {
+  border-right: none;
+}
+
+.input-group .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}

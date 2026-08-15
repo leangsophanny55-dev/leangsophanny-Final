@@ -1,0 +1,53 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg-success-subtle">
+  <div class="card p-4 shadow-sm border-0 rounded-4" style="width: 100%; max-width: 480px; background-color: #f8f9fa;">
+
+    <h3 class="text-center fw-bold mb-4" style="color: #333;">Login Form</h3>
+
+    <form (ngSubmit)="onLogin()">
+      <!-- Username -->
+      <div class="mb-3 text-start">
+        <label class="form-label text-secondary fw-semibold">Username:</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0 text-secondary">
+            <i class="bi bi-person"></i>
+          </span>
+          <input type="text" class="form-control bg-white border-start-0 ps-0" [(ngModel)]="username" name="username"
+            placeholder="Enter username" required>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4 text-start">
+        <label class="form-label text-secondary fw-semibold">Password:</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0 text-secondary">
+            <i class="bi bi-lock"></i>
+          </span>
+          <input type="password" class="form-control bg-white border-start-0 ps-0" [(ngModel)]="password"
+            name="password" placeholder="Enter password" required>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="row g-2 mb-3">
+        <div class="col-6">
+          <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold" [disabled]="!isFormValid()">
+            Login
+          </button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-danger w-100 py-2 fw-semibold" (click)="onReset()">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Link ទៅកាន់ Register -->
+      <div class="text-center">
+        <a routerLink="/register" class="text-primary text-decoration-none small">Don't have an account? Register</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>

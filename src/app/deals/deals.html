@@ -1,0 +1,99 @@
+<!-- Link ទៅកាន់ Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<div class="container my-5">
+
+  <!-- Header Section ជាមួយ Flash Sale Banner -->
+  <div class="deal-header p-4 rounded-4 text-white mb-5 position-relative overflow-hidden shadow-lg">
+    <div class="row align-items-center position-relative z-1">
+      <div class="col-lg-7 text-center text-lg-start mb-3 mb-lg-0">
+        <span class="badge bg-warning text-dark fw-bold mb-2 px-3 py-2 rounded-pill text-uppercase">
+          <i class="bi bi-lightning-charge-fill me-1"></i> Limited Time Offer
+        </span>
+        <h2 class="display-6 fw-bold mb-2">🔥 Special Deals & Promotions</h2>
+        <p class="mb-0 text-white-50 fs-5">Grab your favorite items with discounted prices before stock runs out!</p>
+      </div>
+
+      <!-- Countdown Timer Box -->
+      <div class="col-lg-5">
+        <div class="d-flex justify-content-center justify-content-lg-end gap-2 text-center">
+          <div class="time-box p-2 rounded-3 text-white">
+            <span class="fs-4 fw-bold d-block">08</span>
+            <small class="text-white-50">Hours</small>
+          </div>
+          <span class="fs-3 fw-bold my-auto text-warning">:</span>
+          <div class="time-box p-2 rounded-3 text-white">
+            <span class="fs-4 fw-bold d-block">45</span>
+            <small class="text-white-50">Mins</small>
+          </div>
+          <span class="fs-3 fw-bold my-auto text-warning">:</span>
+          <div class="time-box p-2 rounded-3 text-white">
+            <span class="fs-4 fw-bold d-block">12</span>
+            <small class="text-white-50">Secs</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deals Grid -->
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4" *ngFor="let deal of dealItems">
+      <div class="card deal-card h-100 border-0 rounded-4 shadow-sm overflow-hidden position-relative">
+
+        <!-- Top Badges & Wishlist -->
+        <div class="position-absolute top-0 start-0 w-100 p-3 d-flex justify-content-between align-items-center z-2">
+          <span class="badge badge-discount px-3 py-2 rounded-pill fw-bold shadow-sm">
+            <i class="bi bi-tag-fill me-1"></i> {{ deal.discount }}
+          </span>
+          <button class="btn btn-light btn-wishlist rounded-circle shadow-sm" title="Add to Wishlist">
+            <i class="bi bi-heart-fill text-muted"></i>
+          </button>
+        </div>
+
+        <!-- Image Wrapper -->
+        <div class="img-wrapper overflow-hidden bg-light position-relative">
+          <img [src]="deal.image" class="card-img-top deal-img" alt="{{ deal.title }}">
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <!-- Rating -->
+            <div class="d-flex align-items-center gap-1 mb-2">
+              <i class="bi bi-star-fill text-warning small"></i>
+              <span class="fw-semibold small">{{ deal.rating }}</span>
+              <span class="text-muted small ms-1">(120+ reviews)</span>
+            </div>
+
+            <h5 class="card-title fw-bold text-dark deal-title mb-3">{{ deal.title }}</h5>
+
+            <!-- Prices -->
+            <div class="d-flex align-items-baseline gap-2 mb-3">
+              <span class="fs-3 fw-bold text-danger">${{ deal.discountPrice | number:'1.2-2' }}</span>
+              <span class="text-decoration-line-through text-muted fw-semibold fs-6">${{ deal.originalPrice | number:'1.2-2' }}</span>
+            </div>
+
+            <!-- Stock Progress Bar -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small fw-semibold mb-1">
+                <span class="text-danger"><i class="bi bi-fire me-1"></i>Selling Fast</span>
+                <span class="text-muted">{{ deal.soldPercent }}% Sold</span>
+              </div>
+              <div class="progress rounded-pill" style="height: 8px;">
+                <div class="progress-bar bg-gradient-danger rounded-pill" [style.width.%]="deal.soldPercent"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button class="btn btn-danger btn-buy w-100 fw-bold py-2 rounded-3 shadow-sm d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-cart-plus fs-5"></i> Buy Now
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

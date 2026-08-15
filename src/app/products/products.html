@@ -1,0 +1,100 @@
+<div class="container my-4">
+  <div class="d-flex justify-content-between mb-3">
+    <button class="btn btn-primary" (click)="openAddModal()">+ Add New Product</button>
+    <div class="d-flex gap-2">
+      <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchOrFilterChange()">
+      <select class="form-select" [(ngModel)]="selectedCategory" (ngModelChange)="onSearchOrFilterChange()">
+        <option value="">All Categories</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+    </div>
+  </div>
+
+  <table class="table text-center align-middle">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of paginatedProducts">
+        <td>{{ p.productID }}</td>
+        <td>
+          <img [src]="'https://localhost:7234/images/' + p.image" alt="Product"
+            style="width: 40px; height: 40px; object-fit: contain;"
+            onerror="this.src='https://localhost:7234/images/lipstick1.jpg'">
+        </td>
+        <td>{{ p.productName }}</td>
+        <td>{{ p.quantity }}</td>
+        <td>{{ p.price | currency }}</td>
+        <td>{{ p.amount | currency }}</td>
+        <td>{{ p.categoryName }}</td>
+        <td>
+          <button class="btn btn-success btn-sm" (click)="openEditModal(p)">Edit</button>
+          <button class="btn btn-danger btn-sm ms-2" (click)="deleteProduct(p.productID)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="d-flex justify-content-center gap-2">
+    <button class="btn btn-outline-primary" [disabled]="currentPage === 1"
+      (click)="setPage(currentPage - 1)">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button class="btn btn-outline-primary" [disabled]="currentPage === totalPages"
+      (click)="setPage(currentPage + 1)">Next</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade show d-block" *ngIf="showModal" style="background: rgba(0,0,0,0.5)">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5>{{ isEditing ? 'Edit Product' : 'Add Product' }}</h5>
+
+      <label class="form-label fw-semibold">Product Name</label>
+      <input class="form-control mb-2" [(ngModel)]="currentProduct.productName" placeholder="Name">
+
+      <label class="form-label fw-semibold">Category</label>
+      <select class="form-select mb-2" [(ngModel)]="currentProduct.categoryName">
+        <option value="" disabled selected>-- Select Category --</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+
+      <label class="form-label fw-semibold">Quantity</label>
+      <input class="form-control mb-2" type="number" [(ngModel)]="currentProduct.quantity"
+        (ngModelChange)="calculateAmount()" placeholder="Qty">
+
+      <label class="form-label fw-semibold">Price</label>
+      <input class="form-control mb-2" type="number" [(ngModel)]="currentProduct.price"
+        (ngModelChange)="calculateAmount()" placeholder="Price">
+
+      <!-- បន្ថែមប្រអប់ Amount នៅទីនេះ -->
+      <label class="form-label fw-semibold">Amount (Auto calculated)</label>
+      <input class="form-control mb-2 bg-light" type="number" [(ngModel)]="currentProduct.amount" readonly
+        placeholder="Amount">
+
+      <label class="form-label fw-semibold">Image Name (e.g. lipstick1.jpg)</label>
+      <input class="form-control mb-2" [(ngModel)]="currentProduct.image" placeholder="Image filename">
+
+      <!-- Preview Image in Modal -->
+      <div *ngIf="currentProduct.image" class="mb-2 text-center">
+        <img [src]="'https://localhost:7234/images/' + currentProduct.image"
+          style="max-height: 80px; object-fit: contain;"
+          onerror="this.src='https://localhost:7234/images/lipstick1.jpg'">
+      </div>
+
+      <button class="btn btn-primary mt-2" (click)="saveProduct()">Save</button>
+      <button class="btn btn-secondary mt-2" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+<!-- Link ទៅកាន់ Bootstrap Icons (ប្រសិនបើក្នុងគម្រោងមិនទាន់មាន) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<div class="about-page my-5">
+  <div class="container">
+
+    <!-- Hero Header Section -->
+    <div class="row align-items-center g-5 mb-5">
+      <div class="col-lg-6">
+        <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-2 rounded-pill mb-3">
+          <i class="bi bi-shop me-1"></i> About Our Store
+        </span>
+        <h1 class="display-5 fw-bold text-dark mb-3">
+          Welcome to <span class="text-primary">{{ storeInfo.name }}</span>
+        </h1>
+        <p class="lead text-muted lh-base mb-4">
+          {{ storeInfo.description }}
+        </p>
+
+        <!-- Contact Info Cards -->
+        <div class="row g-3">
+          <div class="col-12 col-sm-6">
+            <div class="d-flex align-items-center p-3 rounded-3 bg-light border-0 shadow-sm">
+              <div class="icon-shape bg-primary text-white rounded-circle me-3">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div>
+                <small class="text-muted d-block">Location</small>
+                <strong class="text-dark small">{{ storeInfo.location }}</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6">
+            <div class="d-flex align-items-center p-3 rounded-3 bg-light border-0 shadow-sm">
+              <div class="icon-shape bg-primary text-white rounded-circle me-3">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <small class="text-muted d-block">Email Us</small>
+                <strong class="text-dark small">{{ storeInfo.email }}</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6">
+            <div class="d-flex align-items-center p-3 rounded-3 bg-light border-0 shadow-sm">
+              <div class="icon-shape bg-primary text-white rounded-circle me-3">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <small class="text-muted d-block">Call Us</small>
+                <strong class="text-dark small">{{ storeInfo.phone }}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Banner / Image -->
+      <div class="col-lg-6">
+        <div class="position-relative">
+          <img src="store.png" alt="Store Image" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover"
+            style="height: 420px;">
+
+          <!-- Floating Badge -->
+          <div
+            class="floating-experience bg-white p-3 rounded-4 shadow position-absolute bottom-0 start-0 m-4 d-flex align-items-center gap-3">
+            <div class="icon-shape bg-success text-white rounded-3 fs-3 px-3 py-2">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-0">Best Service</h5>
+              <small class="text-muted">Certified E-Commerce</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="row g-4 my-5 py-4 bg-primary text-white rounded-4 shadow">
+      <div class="col-6 col-md-3 text-center" *ngFor="let stat of stats">
+        <div class="p-2">
+          <i class="bi {{ stat.icon }} fs-1 text-warning mb-2 d-block"></i>
+          <h2 class="fw-bold mb-0">{{ stat.number }}</h2>
+          <small class="text-white-50 fw-semibold">{{ stat.label }}</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Grid -->
+    <div class="mt-5 text-center">
+      <h6 class="text-primary text-uppercase fw-bold">Our Advantages</h6>
+      <h2 class="fw-bold text-dark mb-4">Why Choose Us?</h2>
+
+      <div class="row g-4 mt-2">
+        <div class="col-12 col-sm-6 col-lg-3" *ngFor="let feat of features">
+          <div class="card feature-card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+            <div
+              class="icon-wrapper mx-auto mb-3 bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center">
+              <i class="bi {{ feat.icon }} fs-2"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">{{ feat.title }}</h5>
+            <p class="text-muted small mb-0">{{ feat.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

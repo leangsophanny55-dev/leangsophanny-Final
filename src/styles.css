@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ==========================================
+   1. GLOBAL & LIGHT MODE
+   ========================================== */
+body {
+  background-color: #f8f9fa;
+  color: #1e293b;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🟢 បង្កើន Specificity ដើម្បីបង្ខំឱ្យ .section-title ចេញពណ៌ខ្មៅច្បាស់ ១០០% */
+html body .section-title,
+html body h2.section-title,
+html body h1.section-title,
+html body .text-center .section-title {
+  color: #0f172a !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 700;
+}
+
+/* Navbar ពេល Light Mode */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-link {
+  color: #334155;
+}
+
+/* Badge / Store Tag ពេល Light Mode */
+.badge, .bg-primary-subtle, .badge-store {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   2. DARK MODE
+   ========================================== */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f8f9fa !important;
+}
+
+/* Navbar ពេល Dark Mode */
+body.dark-mode .navbar,
+body.dark-mode .bg-body-tertiary {
+  background-color: #18181b !important;
+  border-bottom: 1px solid #27272a !important;
+}
+
+body.dark-mode .nav-link {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .nav-link.active,
+body.dark-mode .nav-link:hover {
+  color: #60a5fa !important;
+}
+
+/* 🟢 បង្ខំឱ្យ .section-title ចេញពណ៌សភ្លឺពេល Dark Mode */
+html body.dark-mode .section-title,
+html body.dark-mode h2.section-title,
+html body.dark-mode h1.section-title,
+html body.dark-mode h1.section-title,
+html body.dark-mode .text-center .section-title {
+  color:black!important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Badge ពេល Dark Mode */
+body.dark-mode .badge,
+body.dark-mode .bg-primary-subtle,
+body.dark-mode .badge-store {
+  background-color: #1e3a8a !important;
+  color: #93c5fd !important;
+  font-weight: 600 !important;
+}
+
+body.dark-mode p{
+    color: rgb(56, 36, 190)  !important;
+
+}
+body.dark-mode h2{
+    color: white  !important;
+}
+
+body.dark-mode h1{
+    color: white  !important;
+
+}
+body.dark-mode small{
+    color: rgb(0, 0, 0)  !important;
+
+}
+body.dark-mode h5{
+    color: rgb(0, 0, 0)  !important;
+
+}
+
+/* ==========================================
+   3. CARDS & OTHER COMPONENTS
+   ========================================== */
+.card,
+.category-card {
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card .btn-outline-success {
+  font-weight: 600;
+}

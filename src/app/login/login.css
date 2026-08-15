@@ -1,0 +1,118 @@
+/* 1. Background ពេញ Screen បែប Modern Dark Gradient */
+.login-container {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #46c29b 0%, #5bb5d9 100%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 2. Card រចនាបែប Glassmorphism */
+.card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. Title Styling */
+.card h2 {
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* 4. Form Labels & Input Groups */
+.form-label {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.input-group {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.input-group-text {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-right: none;
+  color: #64748b;
+  padding-left: 14px;
+  padding-right: 10px;
+}
+
+.input-group .form-control {
+  border: 1px solid #cbd5e1;
+  border-left: none;
+  background-color: #f8fafc;
+  padding: 10px 14px 10px 0;
+  font-size: 0.95rem;
+}
+
+/* 5. Focus State ពេលចុចលើ Input */
+.input-group:focus-within {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  border-radius: 10px;
+}
+
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+  border-color: #0d6efd;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+/* 6. Button Animations & Colors */
+.btn {
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  /* background-color: #0d6efd; */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.35);
+}
+
+/* 7. Forgot Password & Links */
+.card a {
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+
+.card a:hover {
+  color: #1d4ed8;
+  text-decoration: underline !important;
+}

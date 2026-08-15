@@ -1,0 +1,79 @@
+<!-- Link Bootstrap Icons ប្រសិនបើគម្រោងមិនទាន់មាន -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
+    <div class="container">
+        <!-- Logo / Brand -->
+        <a routerLink="/home" style="cursor: pointer; text-decoration: none;">
+            <img src="SETECi_Logo.png" alt="Setec Logo" class="site-logo me-2" style="width: 200px; height: auto;">
+        </a>
+
+        <!-- Toggle Button សម្រាប់ Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links (រៀបជាជួរដេកនៅខាងស្តាំ) -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active" style="cursor: pointer;">
+                        <i class="bi bi-house-door me-1"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products" routerLinkActive="active" style="cursor: pointer;">
+                        <i class="bi bi-grid me-1"></i> Products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/deals" routerLinkActive="active" style="cursor: pointer;">
+                        <i class="bi bi-fire me-1 text-danger"></i> Deals & Sales
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active" style="cursor: pointer;">
+                        <i class="bi bi-info-circle me-1"></i> About Us
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Section ខាងស្តាំ៖ សម្រាប់ Dark Mode Toggle, Cart និង Login/Logout -->
+            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+
+                <!-- 🛒 ប៊ូតុង Cart (កន្ត្រកទំនិញ) ដែលបានបន្ថែមថ្មី -->
+                <a routerLink="/cart"
+                    class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center p-0 text-decoration-none"
+                    style="width: 38px; height: 38px; cursor: pointer;" title="Shopping Cart">
+                    <i class="bi bi-cart-fill fs-5"></i>
+                </a>
+
+                <!-- ☀️/🌙 ប៊ូតុង Toggle Light & Dark Mode -->
+                <button type="button"
+                    class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center p-0"
+                    style="width: 38px; height: 38px; cursor: pointer;" (click)="toggleTheme()"
+                    [title]="themeService.isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+
+                    <!-- បង្ហាញ Icon ព្រះអាទិត្យ ☀️ ពេលនៅ Dark Mode -->
+                    <i *ngIf="themeService.isDark" class="bi bi-sun-fill text-warning fs-5"></i>
+
+                    <!-- បង្ហាញ Icon ព្រះច័ន្ទ 🌙 ពេលនៅ Light Mode -->
+                    <i *ngIf="!themeService.isDark" class="bi bi-moon-stars-fill text-dark fs-5"></i>
+                </button>
+
+                <!-- ប៊ូតុង Logout (បង្ហាញពេលបាន Login) -->
+                <button *ngIf="isLoggedIn()" class="btn btn-outline-danger btn-sm px-3 ms-1" style="cursor: pointer;"
+                    (click)="logout()">
+                    Logout
+                </button>
+
+                <!-- ប៊ូតុង Login (បង្ហាញពេលមិនទាន់ Login) -->
+                <a *ngIf="!isLoggedIn()" class="btn btn-outline-primary btn-sm px-3 ms-1" routerLink="/login"
+                    style="cursor: pointer;">
+                    Login
+                </a>
+
+            </div>
+        </div>
+    </div>
+</nav>
