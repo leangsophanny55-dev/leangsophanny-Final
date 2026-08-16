@@ -18,10 +18,9 @@ export class ProductsComponent implements OnInit {
   errorMessage: string = '';
   searchTerm: string = '';
   selectedCategory: string = '';
-  categories: string[] = ['Electronic', 'Makeup', 'clothing' , 'shoes' , 'skincare'];
+  categories: string[] = ['Electronic', 'Makeup', 'clothing', 'shoes', 'skincare'];
   currentPage: number = 1;
   
-  // កែប្រែ itemsPerPage មកជា 5 វិញ (បង្ហាញ 5 ផលិតផលក្នុងមួយទំព័រ)
   itemsPerPage: number = 5; 
   totalPages: number = 1;
   
@@ -35,12 +34,12 @@ export class ProductsComponent implements OnInit {
     this.loadProducts();
   }
 
-  loadProducts(): void {
+  loadProducts(keepPage: boolean = false): void {
     this.isLoading = true;
     this.productService.getProducts().subscribe({
       next: (data: Product[]) => {
         this.products = data;
-        this.onSearchOrFilterChange();
+        this.onSearchOrFilterChange(keepPage);
         this.isLoading = false;
         this.cdr.detectChanges();
       },
@@ -52,16 +51,22 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  onSearchOrFilterChange(): void {
+  // កែប្រែឱ្យទទួល parameter 1 ដើម្បីការពារការ reset ទៅ page 1 ពេល save/delete
+  onSearchOrFilterChange(keepPage: boolean = false): void {
     let result = [...this.products];
 
-    // Search by Product ID or Product Name
+    // Search by Product ID (Exact Match) or Product Name (Contains Match)
     if (this.searchTerm && this.searchTerm.trim()) {
       const term = this.searchTerm.trim().toLowerCase();
-      result = result.filter(p => 
-        (p.productName && p.productName.toLowerCase().includes(term)) || 
-        (p.productID && p.productID.toString().includes(term))
-      );
+      const isNumeric = /^\d+$/.test(term);
+
+      result = result.filter(p => {
+        if (isNumeric) {
+          return p.productID === Number(term);
+        } else {
+          return p.productName && p.productName.toLowerCase().includes(term);
+        }
+      });
     }
 
     // Filter by Category Name
@@ -70,7 +75,12 @@ export class ProductsComponent implements OnInit {
     }
 
     this.filteredProducts = result;
-    this.currentPage = 1;
+
+    // បើមិនមែនជាការ Search ឬ Filter ថ្មីទេ (រក្សា Page เดิม ពេល Add/Edit/Delete)
+    if (!keepPage) {
+      this.currentPage = 1; 
+    }
+
     this.updatePagination();
   }
 
@@ -88,7 +98,7 @@ export class ProductsComponent implements OnInit {
   setPage(page: number): void {
     if (page < 1 || page > this.totalPages) return;
     this.currentPage = page;
-    this.updatePagination();
+    this.updatePagination(); // 🟢 ធ្វើបច្ចុប្បន្នភាពទិន្នន័យតាមទំព័រដែលបានចុច
   }
 
   openAddModal(): void { 
@@ -119,7 +129,7 @@ export class ProductsComponent implements OnInit {
 
     action.subscribe({ 
       next: () => { 
-        this.loadProducts(); 
+        this.loadProducts(true); // រក្សា Page ដើមពេល Save រร็จ
         this.closeModal(); 
       } 
     });
@@ -130,7 +140,7 @@ export class ProductsComponent implements OnInit {
     if (confirm('Are you sure to delete this product?')) {
       this.productService.deleteProduct(id).subscribe({ 
         next: () => { 
-          this.loadProducts(); 
+          this.loadProducts(true); // រក្សា Page ដើមពេល Delete រួច
         } 
       });
     }
