@@ -11,7 +11,7 @@ export interface Product {
   amount: number;           
   description?: string;     
   categoryName?: string;    
-  category?: string;        // <--- បន្ថែមអថេរនេះ ដើម្បីកុំឱ្យ error នៅ home.html
+  category?: string;      
   image?: string;           
 }
 
