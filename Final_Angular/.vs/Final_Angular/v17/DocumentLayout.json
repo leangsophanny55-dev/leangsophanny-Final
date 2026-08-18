@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\models\\deal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\models\\deal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\migrations\\20260814125150_updateproductwithoutdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\migrations\\20260814125150_updateproductwithoutdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\migrations\\20260814123859_syncwithangularmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\migrations\\20260814123859_syncwithangularmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\migrations\\20260814120456_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\migrations\\20260814120456_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\migrations\\20260814134422_removecreateddatefinal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\migrations\\20260814134422_removecreateddatefinal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|d:\\year2\\semester 2\\wd iii\\project-angular-final - copy\\project-angular-final\\final_angular\\final_angular\\migrations\\20260814125945_removecreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B6A799-BC1C-47EA-B274-7463BBD4ACC2}|Final_Angular\\Final_Angular.csproj|solutionrelative:final_angular\\migrations\\20260814125945_removecreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 317,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Deal.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Models\\Deal.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Models\\Deal.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Models\\Deal.cs",
+              "RelativeToolTip": "Final_Angular\\Models\\Deal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-15T12:10:26.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260814125150_UpdateProductWithoutDate.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814125150_UpdateProductWithoutDate.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Migrations\\20260814125150_UpdateProductWithoutDate.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814125150_UpdateProductWithoutDate.cs",
+              "RelativeToolTip": "Final_Angular\\Migrations\\20260814125150_UpdateProductWithoutDate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T12:51:51.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260814123859_SyncWithAngularModel.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814123859_SyncWithAngularModel.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Migrations\\20260814123859_SyncWithAngularModel.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814123859_SyncWithAngularModel.cs",
+              "RelativeToolTip": "Final_Angular\\Migrations\\20260814123859_SyncWithAngularModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T12:38:59.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Final_Angular\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAIwGsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T12:16:17.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260814120456_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814120456_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Migrations\\20260814120456_InitialCreate.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814120456_InitialCreate.cs",
+              "RelativeToolTip": "Final_Angular\\Migrations\\20260814120456_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T12:04:56.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Program.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Program.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Program.cs",
+              "RelativeToolTip": "Final_Angular\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAiwBwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T11:48:54.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Models\\Product.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Models\\Product.cs",
+              "RelativeToolTip": "Final_Angular\\Models\\Product.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T11:41:49.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20260814134422_RemoveCreatedDateFinal.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814134422_RemoveCreatedDateFinal.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Migrations\\20260814134422_RemoveCreatedDateFinal.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814134422_RemoveCreatedDateFinal.cs",
+              "RelativeToolTip": "Final_Angular\\Migrations\\20260814134422_RemoveCreatedDateFinal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T13:44:22.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20260814125945_RemoveCreatedDate.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814125945_RemoveCreatedDate.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Migrations\\20260814125945_RemoveCreatedDate.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Migrations\\20260814125945_RemoveCreatedDate.cs",
+              "RelativeToolTip": "Final_Angular\\Migrations\\20260814125945_RemoveCreatedDate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T12:59:45.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\appsettings.json",
+              "RelativeDocumentMoniker": "Final_Angular\\appsettings.json",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\appsettings.json",
+              "RelativeToolTip": "Final_Angular\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-14T11:47:12.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Final_Angular\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Year2\\Semester 2\\WD III\\Project-Angular-Final - Copy\\Project-Angular-Final\\Final_Angular\\Final_Angular\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Final_Angular\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T11:43:46.701Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
