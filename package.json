@@ -1,10 +1,10 @@
 {
   "name": "website-product",
   "version": "0.0.0",
-  "scripts": {
+"scripts": {
   "start": "ng serve",
-  "build": "ng build",
-  "watch": "ng build --watch --configuration development",
+  "build": "npx ng build",
+  "watch": "npx ng build --watch --configuration development",
   "test": "ng test"
 },
   "private": true,
