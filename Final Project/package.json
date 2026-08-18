@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/router": "^21.2.20",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  }
+}
